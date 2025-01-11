@@ -1,0 +1,464 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1112.0850                               -->
+<workbook original-version='18.1' source-build='2024.3.1 (20243.24.1112.0850)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='screentime_analysis' inline='true' name='federated.0rwmprm0w86nmc1gtbh9u1tfuv8p' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='screentime_analysis' name='textscan.06fua8t1p0fpkf195422306n4we7'>
+            <connection class='textscan' directory='C:/office24' filename='screentime_analysis.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.06fua8t1p0fpkf195422306n4we7' name='screentime_analysis.csv' table='[screentime_analysis#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='Date' ordinal='0' />
+            <column datatype='string' name='App' ordinal='1' />
+            <column datatype='integer' name='Usage (minutes)' ordinal='2' />
+            <column datatype='integer' name='Notifications' ordinal='3' />
+            <column datatype='integer' name='Times Opened' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[screentime_analysis.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[screentime_analysis.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>App</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[App]</local-name>
+            <parent-name>[screentime_analysis.csv]</parent-name>
+            <remote-alias>App</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Usage (minutes)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Usage (minutes)]</local-name>
+            <parent-name>[screentime_analysis.csv]</parent-name>
+            <remote-alias>Usage (minutes)</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Notifications</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Notifications]</local-name>
+            <parent-name>[screentime_analysis.csv]</parent-name>
+            <remote-alias>Notifications</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Times Opened</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Times Opened]</local-name>
+            <parent-name>[screentime_analysis.csv]</parent-name>
+            <remote-alias>Times Opened</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Notifications]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Times Opened]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Usage (minutes)]' role='measure' type='quantitative' />
+      <column caption='screentime_analysis.csv' datatype='table' name='[__tableau_internal_object_id__].[screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A]' role='measure' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Notifications]' derivation='Count' name='[cnt:Notifications:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Notifications]' derivation='CountD' name='[ctd:Notifications:qk]' pivot='key' type='quantitative' />
+      <column-instance aggregation-param='90' column='[Notifications]' derivation='Percentile' name='[prc90:Notifications:qk]' pivot='key' type='quantitative' />
+      <column-instance aggregation-param='95' column='[Notifications]' derivation='Percentile' name='[prc95:Notifications:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Notifications]' derivation='Sum' name='[sum:Notifications:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Times Opened]' derivation='Sum' name='[sum:Times Opened:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Usage (minutes)]' derivation='Sum' name='[sum:Usage (minutes):qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/arfit/OneDrive/Documents/My Tableau Repository/Datasources/screentime_analysis.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='01/05/2025 02:03:06 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='screentime_analysis' increment-value='%null%' refresh-type='create' rows-inserted='200' timestamp-start='2025-01-05 14:03:06.220' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>screentime_analysis.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>App</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[App]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>App</remote-alias>
+              <ordinal>1</ordinal>
+              <family>screentime_analysis.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Usage (minutes)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Usage (minutes)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Usage (minutes)</remote-alias>
+              <ordinal>2</ordinal>
+              <family>screentime_analysis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>81</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Notifications</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Notifications]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Notifications</remote-alias>
+              <ordinal>3</ordinal>
+              <family>screentime_analysis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>76</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Times Opened</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Times Opened]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Times Opened</remote-alias>
+              <ordinal>4</ordinal>
+              <family>screentime_analysis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>62</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[__tableau_internal_object_id__].[cnt:screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[sum:Usage (minutes):qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[sum:Times Opened:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[cnt:Notifications:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[ctd:Notifications:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[prc90:Notifications:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[prc95:Notifications:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[sum:Notifications:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='screentime_analysis.csv' id='screentime_analysis.csv_936409EB75224C50B5B88C2E9C5EA83A'>
+            <properties context=''>
+              <relation connection='textscan.06fua8t1p0fpkf195422306n4we7' name='screentime_analysis.csv' table='[screentime_analysis#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='Date' ordinal='0' />
+                  <column datatype='string' name='App' ordinal='1' />
+                  <column datatype='integer' name='Usage (minutes)' ordinal='2' />
+                  <column datatype='integer' name='Notifications' ordinal='3' />
+                  <column datatype='integer' name='Times Opened' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Test_Run'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Test_Run</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='screentime_analysis' name='federated.0rwmprm0w86nmc1gtbh9u1tfuv8p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rwmprm0w86nmc1gtbh9u1tfuv8p'>
+            <column datatype='string' name='[App]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Notifications]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Times Opened]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Usage (minutes)]' role='measure' type='quantitative' />
+            <column-instance column='[App]' derivation='None' name='[none:App:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Notifications]' derivation='Sum' name='[sum:Notifications:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Times Opened]' derivation='Sum' name='[sum:Times Opened:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Usage (minutes)]' derivation='Sum' name='[sum:Usage (minutes):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <natural-sort column='[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[none:App:nk]' direction='ASC' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[sum:Notifications:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[sum:Usage (minutes):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[sum:Times Opened:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[none:App:nk]</rows>
+        <cols>([federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[sum:Notifications:qk] + ([federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[sum:Usage (minutes):qk] + [federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[sum:Times Opened:qk]))</cols>
+      </table>
+      <simple-id uuid='{C364401C-81D2-4F79-BF7B-D5F0B1A2B54C}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Test_Run'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[:Measure Names]</field>
+            <field>[federated.0rwmprm0w86nmc1gtbh9u1tfuv8p].[none:App:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{AD2767B0-D26B-443B-B1C5-CEDC0CD4E9AE}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Test_Run' width='192'>
+      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
+      0g0qxCX1/0e1pTKhsEu3AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
